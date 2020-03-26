@@ -1,0 +1,6 @@
+framework module Pods_YLBProUI_Tests {
+  umbrella header "Pods-YLBProUI_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
