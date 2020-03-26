@@ -1,16 +1,23 @@
 PODS:
-  - YLBProUI (0.1.0)
+  - YLBCommon (0.2.0)
+  - YLBProUI (0.1.0):
+    - YLBCommon
 
 DEPENDENCIES:
   - YLBProUI (from `../`)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - YLBCommon
 
 EXTERNAL SOURCES:
   YLBProUI:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YLBProUI: b1f43615cd77c977578556510fc6010f7bdcc60a
+  YLBCommon: 8f833201a3f144e14e8d30104df677e925ba414c
+  YLBProUI: f1c059b8d3151e8a6a5bdf0fba329d2e3e5bb020
 
-PODFILE CHECKSUM: 1f27a9df303cb888082d18fe9184394f6b1e8b98
+PODFILE CHECKSUM: d1cdcfb9d1259e1045f346e93ca4c216335bf3da
 
 COCOAPODS: 1.8.4
