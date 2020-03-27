@@ -12,5 +12,6 @@
 #import "YLBBaseButton.h"
 #import "YLBImageButton.h"
 #import "YLBLabelImageButton.h"
+#import "YLBAlertView.h"
 
 #endif /* YLBProUI_h */

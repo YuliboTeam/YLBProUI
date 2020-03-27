@@ -10,9 +10,11 @@
 #endif
 #endif
 
+#import "YLBAlertView.h"
 #import "YLBBaseButton.h"
 #import "YLBImageButton.h"
 #import "YLBLabelImageButton.h"
+#import "YLBDottedLine.h"
 #import "YLBProUI.h"
 
 FOUNDATION_EXPORT double YLBProUIVersionNumber;
