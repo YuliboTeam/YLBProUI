@@ -9,7 +9,9 @@
 #import "YLBLabelImageButton.h"
 
 @interface YLBLabelImageButton ()
-
+@property(nonatomic, assign) CGRect buttonRect;
+@property(nonatomic, assign) CGRect imageViewRect;
+@property(nonatomic, assign) CGRect titleRect;
 @end
 
 @implementation YLBLabelImageButton
@@ -33,17 +35,27 @@
 - (void)setupCurrentView {
     [super setupCurrentView];
     
-    _titleLabel = [[UILabel alloc] init];
-    _titleLabel.userInteractionEnabled = NO;
-    [self addSubview:_titleLabel];
+    _ylbTitleLabel = [[UILabel alloc] init];
+    _ylbTitleLabel.userInteractionEnabled = NO;
+    [self addSubview:_ylbTitleLabel];
     
-    _imageView = [[UIImageView alloc] init];
-    _imageView.userInteractionEnabled = NO;
-    [self addSubview:_imageView];
+    _ylbImageView = [[UIImageView alloc] init];
+    _ylbImageView.userInteractionEnabled = NO;
+    [self addSubview:_ylbImageView];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+}
+
+- (void)setButtonRect:(CGRect)buttonRect titleRect:(CGRect)titleRect imageViewRect:(CGRect)imageViewRect {
+    _buttonRect = buttonRect;
+    _titleRect = titleRect;
+    _imageViewRect = imageViewRect;
+    
+    self.frame = _buttonRect;
+    _ylbTitleLabel.frame = _titleRect;
+    _ylbImageView.frame = _imageViewRect;
 }
 @end

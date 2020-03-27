@@ -10,7 +10,7 @@
 #define YLBProUI_h
 
 #import "YLBBaseButton.h"
-#import "YLBBaseButton.h"
+#import "YLBImageButton.h"
 #import "YLBLabelImageButton.h"
 
 #endif /* YLBProUI_h */

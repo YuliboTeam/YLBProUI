@@ -17,10 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface YLBImageButton : YLBBaseButton
-@property(nonatomic, strong) UILabel *titleLabel;
-@property(nonatomic, strong) UIImageView *imageView;
+@property(nonatomic, strong) UIImageView *ylbImageView;
 
-@property(nonatomic, weak) id<YLBImageButtonDelegate> delegate;
+@property(nonatomic, weak) id<YLBImageButtonDelegate> ylbDelegate;
 /**
  设置button和imageView的坐标
  */

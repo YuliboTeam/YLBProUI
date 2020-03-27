@@ -11,8 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YLBLabelImageButton : YLBBaseButton
-@property(nonatomic, strong) UILabel *titleLabel;
-@property(nonatomic, strong) UIImageView *imageView;
+@property(nonatomic, strong) UILabel *ylbTitleLabel;
+@property(nonatomic, strong) UIImageView *ylbImageView;
+
+- (void)setButtonRect:(CGRect)buttonRect titleRect:(CGRect)titleRect imageViewRect:(CGRect)imageViewRect;
 @end
 
 NS_ASSUME_NONNULL_END

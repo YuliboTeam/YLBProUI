@@ -11,6 +11,7 @@
 @interface YLBImageButton ()
 @property(nonatomic, assign) CGRect buttonRect;
 @property(nonatomic, assign) CGRect imageViewRect;
+
 @end
 
 @implementation YLBImageButton
@@ -31,9 +32,9 @@
 
 - (void)setupCurrentView {
     [super setupCurrentView];
-    _imageView = [[UIImageView alloc] init];
-    _imageView.userInteractionEnabled = NO;
-    [self addSubview:_imageView];
+    _ylbImageView = [[UIImageView alloc] init];
+    _ylbImageView.userInteractionEnabled = NO;
+    [self addSubview:_ylbImageView];
 }
 
 #pragma mark - 设置UI
@@ -48,7 +49,7 @@
     _imageViewRect = imageViewRect;
     
     self.frame = _buttonRect;
-    self.imageView.frame = _imageViewRect;
+    _ylbImageView.frame = _imageViewRect;;
 }
 
 @end
