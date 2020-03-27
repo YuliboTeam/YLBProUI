@@ -33,13 +33,13 @@
 - (void)setupCurrentView {
     [super setupCurrentView];
     
-    _ylbTitleLable = [[UILabel alloc] init];
-    _ylbTitleLable.userInteractionEnabled = NO;
-    [self addSubview:_ylbTitleLable];
+    _titleLabel = [[UILabel alloc] init];
+    _titleLabel.userInteractionEnabled = NO;
+    [self addSubview:_titleLabel];
     
-    _ylbImage = [[UIImageView alloc] init];
-    _ylbImage.userInteractionEnabled = NO;
-    [self addSubview:_ylbImage];
+    _imageView = [[UIImageView alloc] init];
+    _imageView.userInteractionEnabled = NO;
+    [self addSubview:_imageView];
 }
 
 - (void)layoutSubviews {

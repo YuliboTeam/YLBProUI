@@ -8,8 +8,19 @@
 
 #import "YLBImageButton.h"
 
+@interface YLBImageButton ()
+@property(nonatomic, assign) CGRect buttonRect;
+@property(nonatomic, assign) CGRect imageViewRect;
+@end
+
 @implementation YLBImageButton
 
+#pragma mark - dealloc
+- (void)dealloc {
+    
+}
+
+#pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -20,15 +31,24 @@
 
 - (void)setupCurrentView {
     [super setupCurrentView];
-    
-    _ylbImage = [[UIImageView alloc] init];
-    _ylbImage.userInteractionEnabled = NO;
-    [self addSubview:_ylbImage];
+    _imageView = [[UIImageView alloc] init];
+    _imageView.userInteractionEnabled = NO;
+    [self addSubview:_imageView];
 }
 
+#pragma mark - 设置UI
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+}
+
+#pragma mark - 设置button和imageView的坐标
+- (void)setButtonRect:(CGRect)buttonRect imageViewRect:(CGRect)imageViewRect {
+    _buttonRect = buttonRect;
+    _imageViewRect = imageViewRect;
+    
+    self.frame = _buttonRect;
+    self.imageView.frame = _imageViewRect;
 }
 
 @end
