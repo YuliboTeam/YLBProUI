@@ -67,12 +67,14 @@
     
 }
 #pragma mark - 显示弹框
-- (void)showView:(UIView *)view {
+- (void)showView:(UIView *)view alignment:(YLBAlertViewAlignment)alignment {
     if (!_isAddContentView) {
         _isAddContentView = YES;
         _contentView = view;
         if (_contentView) {
-            _contentView.center = CGPointMake(self.ylb_width/2.0, self.ylb_height/2.0);
+            if (alignment == YLBAlertViewAlignmentCenter) {
+                _contentView.center = CGPointMake(self.ylb_width/2.0, self.ylb_height/2.0);
+            }
             _contentView.userInteractionEnabled = YES;
             [self addSubview:_contentView];
         }

@@ -10,14 +10,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, YLBAlertViewAlignment) {
+    YLBAlertViewAlignmentNone = 0,
+    YLBAlertViewAlignmentCenter
+};
+
 @interface YLBAlertView : UIView
-
+/**
+ 点击空白处是否移除弹框
+ */
 @property(nonatomic, assign) BOOL isTouchEnable;
-
+/**
+ 创建弹框
+ */
 + (instancetype)createAlertView;
-
-- (void)showView:(UIView *)view;
+/**
+ 显示弹框
+ */
+- (void)showView:(UIView *)view alignment:(YLBAlertViewAlignment)alignment;
+/**
+ 移除弹框
+ */
 - (void)hideView;
+/**
+ 设置背景颜色及透明度
+ */
 - (void)setBackgroundViewColor:(UIColor *)color;
 @end
 
