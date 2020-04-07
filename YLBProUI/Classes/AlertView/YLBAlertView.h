@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, YLBAlertViewAlignment) {
  */
 - (void)hideView;
 /**
- 移除弹框回调方法
+ 移除弹框回调方法：主要用于手动释放全局变量weakSelf.alertView = nil;局部变量可以不设置，系统将会自动释放。
  */
 @property(nonatomic, copy) void (^hideViewBlock)(void);
 /**
