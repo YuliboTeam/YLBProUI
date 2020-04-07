@@ -52,6 +52,7 @@
     YLBAlertView *alertView = [YLBAlertView createAlertView];
     [alertView setBackgroundViewColor:bgColor];
     [alertView showView:showView alignment:YLBAlertViewAlignmentCenter];
+    alertView = nil;//全局变量需要手动释放设置为nil，局部变量可以不设置为nil
 }
 
 @end
