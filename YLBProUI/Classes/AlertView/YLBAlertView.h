@@ -33,6 +33,10 @@ typedef NS_ENUM(NSInteger, YLBAlertViewAlignment) {
  */
 - (void)hideView;
 /**
+ 移除弹框回调方法
+ */
+@property(nonatomic, copy) void (^hideViewBlock)(void);
+/**
  设置背景颜色及透明度
  */
 - (void)setBackgroundViewColor:(UIColor *)color;

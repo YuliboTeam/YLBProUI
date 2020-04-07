@@ -10,7 +10,7 @@
 #import <YLBProUI/YLBProUI.h>
 
 @interface YULIBOViewController ()
-
+@property(nonatomic, strong) YLBAlertView *alertView;
 @end
 
 @implementation YULIBOViewController
@@ -50,9 +50,13 @@
     showView.layer.cornerRadius = 10;
     
     YLBAlertView *alertView = [YLBAlertView createAlertView];
+    _alertView = alertView;
     [alertView setBackgroundViewColor:bgColor];
     [alertView showView:showView alignment:YLBAlertViewAlignmentCenter];
-    alertView = nil;//全局变量需要手动释放设置为nil，局部变量可以不设置为nil
+    __weak __typeof(self)weakSelf = self;
+    alertView.hideViewBlock = ^{
+        weakSelf.alertView = nil;//全局变量需要手动释放设置为nil，局部变量可以不设置为nil
+    };
 }
 
 @end

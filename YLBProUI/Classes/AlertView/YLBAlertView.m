@@ -88,6 +88,9 @@
     _contentView = nil;
     _isAddContentView = NO;
     [self removeFromSuperview];
+    if (self.hideViewBlock) {
+        self.hideViewBlock();
+    }
 }
 #pragma mark - 设置弹框背景颜色
 - (void)setBackgroundViewColor:(UIColor *)color {
