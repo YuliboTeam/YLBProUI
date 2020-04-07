@@ -99,7 +99,7 @@
         return;
     }
     UITouch *touch = [touches anyObject];
-    if (_contentView && _contentView == touch.view) {
+    if (self != touch.view) {
         return;
     }
     [self hideView];
