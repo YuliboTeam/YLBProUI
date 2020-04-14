@@ -13,4 +13,8 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+
+#import <YLBCommon/YLBCommon.h>
+#import "YLBProUI_Example-Swift.h"
+
 #endif

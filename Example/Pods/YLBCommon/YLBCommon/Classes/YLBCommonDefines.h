@@ -44,11 +44,25 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define YLBDLog(...)
 #endif
 
+//防止字符串为nil
+#define YLB_PROTECT_STR(x) (x == nil ? @"" : x)
+
 #pragma mark - iPhone屏幕宽高
 // 屏幕宽度
 #define YLB_SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-//屏幕高度
+// 屏幕高度
 #define YLB_SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
 
+#pragma mark - 颜色
+// RGBA颜色
+#define YLBRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(1.0)]
+// RGBA颜色
+#define YLBRGBAColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+// 随机颜色
+#define YLBRandomColor YLBRGBAColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1)
+// 十六进制颜色
+#define YLBHexColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+// 十六进制颜色，带透明值
+#define YLBHexAColor(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 
 #endif /* YLBCommonDefines_h */

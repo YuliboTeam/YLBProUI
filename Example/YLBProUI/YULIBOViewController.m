@@ -7,25 +7,28 @@
 //
 
 #import "YULIBOViewController.h"
-#import <YLBProUI/YLBProUI.h>
 
 @interface YULIBOViewController ()
-@property(nonatomic, strong) YLBAlertView *alertView;
+@property(nonatomic, strong) NSMutableArray *dataArray;
 @end
+
+static NSString * const kNormalCell = @"kNormalCell";
 
 @implementation YULIBOViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
-    UIButton *clickButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
-    clickButton.center = CGPointMake(self.view.ylb_width/2.0, self.view.ylb_height/2.0);
-    clickButton.backgroundColor = UIColor.cyanColor;
-    [clickButton setTitle:@"显示弹框" forState:UIControlStateNormal];
-    [clickButton addTarget:self action:@selector(clickButtonMethod:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:clickButton];
+    self.view.backgroundColor = UIColor.whiteColor;
+//    self.title = @"功能列表";
+    self.navigationItem.title = @"功能列表";
+    self.tableView.ylb_y = YLBStatusBarHeight + YLBNavigationBarHeight;
+    self.tableView.ylb_height = self.view.ylb_height - (YLBStatusBarHeight + YLBNavigationBarHeight);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kNormalCell];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,29 +37,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)clickButtonMethod:(id)sender {
-    [self showAlertView];
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [@[
+            @{
+                @"name":@"弹框",
+                @"vc":@"YULIBOOCShowAlertController"
+            },
+            @{
+                @"name":@"UILabel布局",
+                @"vc":@"YULIBOShowLabelController"
+            },
+            @{
+                @"name":@"Swift布局",
+                @"vc":@"_TtC16YLBProUI_Example25YULIBOShowAlertController"
+            },
+        ] mutableCopy];
+    }
+    return _dataArray;
 }
 
-- (void)showAlertView {
-    UIColor *bgColor = [UIColor colorWithWhite:0 alpha:0.4];
-    UIView *showView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
-    titleLabel.center = CGPointMake(showView.ylb_width/2.0, showView.ylb_height/2.0);
-    titleLabel.text = @"弹框页";
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    [showView addSubview:titleLabel];
-    showView.backgroundColor = UIColor.whiteColor;
-    showView.layer.cornerRadius = 10;
+- (UITableViewStyle)getUITableViewStyle {
+    return UITableViewStylePlain;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kNormalCell];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = dict[@"name"];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
     
-    YLBAlertView *alertView = [YLBAlertView createAlertView];
-    _alertView = alertView;
-    [alertView setBackgroundViewColor:bgColor];
-    [alertView showView:showView alignment:YLBAlertViewAlignmentCenter];
-    __weak __typeof(self)weakSelf = self;
-    alertView.hideViewBlock = ^{
-        weakSelf.alertView = nil;//全局变量需要手动释放设置为nil，局部变量可以不设置为nil
-    };
+    UIViewController *vc = [[NSClassFromString(dict[@"vc"]) alloc] init];
+    vc.title = dict[@"name"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

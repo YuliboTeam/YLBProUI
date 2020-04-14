@@ -15,6 +15,7 @@
 #import "YLBImageButton.h"
 #import "YLBLabelImageButton.h"
 #import "YLBDottedLine.h"
+#import "YLBLayoutLabelUpDownView.h"
 #import "YLBProUI.h"
 
 FOUNDATION_EXPORT double YLBProUIVersionNumber;

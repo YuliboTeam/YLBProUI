@@ -1,5 +1,5 @@
 PODS:
-  - YLBCommon (0.2.0)
+  - YLBCommon (1.0.0)
   - YLBProUI (0.1.0):
     - YLBCommon
 
@@ -15,11 +15,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   YLBCommon:
-    :commit: 8a4befe4ee859b11c3c1879aee30e84ca5aeffdc
+    :commit: cf761263285ee24068eb7a928dacf8a6dbfddff5
     :git: https://github.com/ProBobo/YLBCommon.git
 
 SPEC CHECKSUMS:
-  YLBCommon: 8f833201a3f144e14e8d30104df677e925ba414c
+  YLBCommon: 1da4ba715aa64444554959517eb041f3d5c5cb80
   YLBProUI: f1c059b8d3151e8a6a5bdf0fba329d2e3e5bb020
 
 PODFILE CHECKSUM: 0049a682bbe7dd503f5dd6501f4281750d28bc52
