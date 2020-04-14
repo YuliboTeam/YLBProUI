@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UILabel *topLabel;
 @property(nonatomic, strong) UILabel *bottomLabel;
 + (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topHeight:(CGFloat)topHeight middleSpace:(CGFloat)middleSpace bottomHeight:(CGFloat)bottomHeight;
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+- (instancetype)initWithFrame:(CGRect)frame topHeight:(CGFloat)topHeight middleSpace:(CGFloat)middleSpace bottomHeight:(CGFloat)bottomHeight NS_DESIGNATED_INITIALIZER;
 @end
 
 NS_ASSUME_NONNULL_END
