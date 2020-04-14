@@ -17,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param leftSpace 左边距
  @param rightSpace 右边距
  */
-+ (instancetype)createViewWithSuperViewFrame:(CGRect)superViewFrame leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace;
++ (instancetype)createViewWithSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace;
 /**
  初始化视图
  */
-- (instancetype)initWithSuperViewFrame:(CGRect)superViewFrame leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace;
+- (instancetype)initWithSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace;
 @end
 
 NS_ASSUME_NONNULL_END

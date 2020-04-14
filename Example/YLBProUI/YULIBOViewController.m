@@ -52,6 +52,10 @@ static NSString * const kNormalCell = @"kNormalCell";
                 @"name":@"Swift布局",
                 @"vc":@"_TtC16YLBProUI_Example25YULIBOShowAlertController"
             },
+            @{
+                @"name":@"View布局",
+                @"vc":@"YULIBOShowLayoutController"
+            },
         ] mutableCopy];
     }
     return _dataArray;

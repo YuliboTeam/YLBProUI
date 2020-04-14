@@ -24,17 +24,17 @@
 }
 */
 
-+ (instancetype)createViewWithSuperViewFrame:(CGRect)superViewFrame leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace {
-    YLBHorizontalView *view = [[YLBHorizontalView alloc] initWithSuperViewFrame:superViewFrame leftSpace:leftSpace rightSpace:rightSpace];
++ (instancetype)createViewWithSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace {
+    YLBHorizontalView *view = [[YLBHorizontalView alloc] initWithSuperViewFrame:superViewFrame height:height leftSpace:leftSpace rightSpace:rightSpace];
     return view;
 }
 
-- (instancetype)initWithSuperViewFrame:(CGRect)superViewFrame leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace {
+- (instancetype)initWithSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace {
     self = [super initWithFrame:superViewFrame];
     if (self) {
         self.leftSpace = leftSpace;
         self.rightSpace = rightSpace;
-        self.frame = CGRectMake(leftSpace, superViewFrame.origin.y, superViewFrame.size.width - leftSpace - rightSpace, superViewFrame.size.height);
+        self.frame = CGRectMake(leftSpace, 0, superViewFrame.size.width - leftSpace - rightSpace, height);
     }
     return self;
 }

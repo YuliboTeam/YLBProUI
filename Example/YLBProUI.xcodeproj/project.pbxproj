@@ -27,6 +27,7 @@
 		BE4FB0CE2445659800EEF072 /* YULIBOShowAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0CD2445659800EEF072 /* YULIBOShowAlertController.swift */; };
 		BE4FB0D4244566EE00EEF072 /* YULIBOOCShowAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0D3244566EE00EEF072 /* YULIBOOCShowAlertController.m */; };
 		BE4FB0D82445690F00EEF072 /* YULIBOShowLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0D72445690F00EEF072 /* YULIBOShowLabelController.m */; };
+		BE4FB0F1244613E000EEF072 /* YULIBOShowLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0F0244613E000EEF072 /* YULIBOShowLayoutController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		BE4FB0D3244566EE00EEF072 /* YULIBOOCShowAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YULIBOOCShowAlertController.m; sourceTree = "<group>"; };
 		BE4FB0D62445690F00EEF072 /* YULIBOShowLabelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YULIBOShowLabelController.h; sourceTree = "<group>"; };
 		BE4FB0D72445690F00EEF072 /* YULIBOShowLabelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YULIBOShowLabelController.m; sourceTree = "<group>"; };
+		BE4FB0EF244613E000EEF072 /* YULIBOShowLayoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YULIBOShowLayoutController.h; sourceTree = "<group>"; };
+		BE4FB0F0244613E000EEF072 /* YULIBOShowLayoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YULIBOShowLayoutController.m; sourceTree = "<group>"; };
 		DF301DF8050C266689B061A1 /* Pods_YLBProUI_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLBProUI_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA529871F266DD9D28E73D0A /* Pods-YLBProUI_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLBProUI_Example.release.xcconfig"; path = "Target Support Files/Pods-YLBProUI_Example/Pods-YLBProUI_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FDCB85FAD648EC7DFCFEC6A9 /* Pods-YLBProUI_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLBProUI_Tests.release.xcconfig"; path = "Target Support Files/Pods-YLBProUI_Tests/Pods-YLBProUI_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 		BE4FB0CA2445654F00EEF072 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE4FB0EE244613A800EEF072 /* View */,
 				BE4FB0D5244568A200EEF072 /* Label */,
 				BE4FB0CB2445654F00EEF072 /* Alert */,
 			);
@@ -233,6 +237,15 @@
 				BE4FB0D72445690F00EEF072 /* YULIBOShowLabelController.m */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		BE4FB0EE244613A800EEF072 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE4FB0EF244613E000EEF072 /* YULIBOShowLayoutController.h */,
+				BE4FB0F0244613E000EEF072 /* YULIBOShowLayoutController.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* YULIBOAppDelegate.m in Sources */,
+				BE4FB0F1244613E000EEF072 /* YULIBOShowLayoutController.m in Sources */,
 				BE4FB0D82445690F00EEF072 /* YULIBOShowLabelController.m in Sources */,
 				BE4FB0D4244566EE00EEF072 /* YULIBOOCShowAlertController.m in Sources */,
 				6003F5A7195388D20070C39A /* YULIBOViewController.m in Sources */,
