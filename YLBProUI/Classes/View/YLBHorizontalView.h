@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)resetWidthWihSuperViewFrame:(CGRect)superViewFrame;
 /**
+ 传入间距生成视图：
  主要在tableView的Cell中添加时在layoutSubviews方法中重新设置宽高，因为初始化时cell传入的宽高为0
  */
 - (void)resetWidthWihSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace;
