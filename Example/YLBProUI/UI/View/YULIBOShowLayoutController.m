@@ -23,6 +23,8 @@
     horizontalView.ylb_y = 200;
     horizontalView.backgroundColor = UIColor.cyanColor;
     [self.view addSubview:horizontalView];
+    
+    [UIView ylb_addCustomShadowToViewWithOriginalView:horizontalView cornerRadius:10 shadowColor:UIColor.lightGrayColor shadowOffset:CGSizeMake(0, 4) shadowOpacity:0.5];
 }
 
 /*
