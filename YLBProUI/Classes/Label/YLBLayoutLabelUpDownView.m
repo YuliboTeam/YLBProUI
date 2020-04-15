@@ -9,9 +9,9 @@
 #import "YLBLayoutLabelUpDownView.h"
 #import <YLBCommon/YLBCommon.h>
 @interface YLBLayoutLabelUpDownView ()
-@property(nonatomic, assign) CGFloat topHeight;
+@property(nonatomic, assign) CGFloat topLabelHeight;
 @property(nonatomic, assign) CGFloat middleSpace;
-@property(nonatomic, assign) CGFloat bottomHeight;
+@property(nonatomic, assign) CGFloat bottomLabelHeight;
 @end
 
 @implementation YLBLayoutLabelUpDownView
@@ -24,17 +24,17 @@
 }
 */
 
-+ (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topHeight:(CGFloat)topHeight middleSpace:(CGFloat)middleSpace bottomHeight:(CGFloat)bottomHeight {
-    YLBLayoutLabelUpDownView *upDwonView = [[YLBLayoutLabelUpDownView alloc] initWithFrame:frame topHeight:topHeight middleSpace:middleSpace bottomHeight:bottomHeight];
++ (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
+    YLBLayoutLabelUpDownView *upDwonView = [[YLBLayoutLabelUpDownView alloc] initWithFrame:frame topLabelHeight:topLabelHeight middleSpace:middleSpace bottomLabelHeight:bottomLabelHeight];
     return upDwonView;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame topHeight:(CGFloat)topHeight middleSpace:(CGFloat)middleSpace bottomHeight:(CGFloat)bottomHeight {
+- (instancetype)initWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
     self = [super initWithFrame:frame];
     if (self) {
-        self.topHeight = topHeight;
+        self.topLabelHeight = topLabelHeight;
         self.middleSpace = middleSpace;
-        self.bottomHeight = bottomHeight;
+        self.bottomLabelHeight = bottomLabelHeight;
         [self setupUpDownSubviews];
     }
     return self;
@@ -49,8 +49,8 @@
     _bottomLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_bottomLabel];
     
-    _topLabel.frame = CGRectMake(0, 0, self.ylb_width, self.topHeight);
-    _bottomLabel.frame = CGRectMake(0, _topLabel.ylb_maxY + self.middleSpace, self.ylb_width, self.bottomHeight);
+    _topLabel.frame = CGRectMake(0, 0, self.ylb_width, self.topLabelHeight);
+    _bottomLabel.frame = CGRectMake(0, _topLabel.ylb_maxY + self.middleSpace, self.ylb_width, self.bottomLabelHeight);
     
 }
 

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    YLBLayoutLabelUpDownView *labelView = [YLBLayoutLabelUpDownView createUpDownLabelViewWithFrame:CGRectMake(0, 0, self.view.ylb_width, 50) topHeight:25 middleSpace:0 bottomHeight:25];
+    YLBLayoutLabelUpDownView *labelView = [YLBLayoutLabelUpDownView createUpDownLabelViewWithFrame:CGRectMake(0, 0, self.view.ylb_width, 50) topLabelHeight:25 middleSpace:0 bottomLabelHeight:25];
     [labelView ylb_becomeCenterInSuperView:self.view];
     labelView.topLabel.text = @"I'm topLabel";
     labelView.bottomLabel.text = @"I'm bottomLabel";
