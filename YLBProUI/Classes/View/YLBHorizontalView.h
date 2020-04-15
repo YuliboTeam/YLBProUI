@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  重新设置宽度
  */
-- (void)reFitWidth;
+- (void)resetWidthWihSuperViewFrame:(CGRect)superViewFrame;
 @end
 
 NS_ASSUME_NONNULL_END

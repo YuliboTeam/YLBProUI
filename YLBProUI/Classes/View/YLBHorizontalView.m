@@ -12,6 +12,7 @@
 @interface YLBHorizontalView()
 @property(nonatomic, assign) CGFloat leftSpace;
 @property(nonatomic, assign) CGFloat rightSpace;
+@property(nonatomic, assign) CGFloat customHeight;
 @end
 
 @implementation YLBHorizontalView
@@ -34,12 +35,13 @@
     if (self) {
         self.leftSpace = leftSpace;
         self.rightSpace = rightSpace;
+        self.customHeight = height;
         self.frame = CGRectMake(leftSpace, 0, superViewFrame.size.width - leftSpace - rightSpace, height);
     }
     return self;
 }
 
-- (void)reFitWidth {
-    self.frame = CGRectMake(leftSpace, 0, superViewFrame.size.width - leftSpace - rightSpace, height);
+- (void)resetWidthWihSuperViewFrame:(CGRect)superViewFrame {
+    self.frame = CGRectMake(self.leftSpace, 0, superViewFrame.size.width - self.leftSpace - self.rightSpace, self.customHeight);
 }
 @end
