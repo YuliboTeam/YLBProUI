@@ -58,7 +58,7 @@
     self.bottomLabelHeight = bottomLabelHeight;
     self.frame = frame;
     
-    _topLabel.frame = CGRectMake(0, 0, self.ylb_width, self.topLabelHeight);
+    _topLabel.frame = CGRectMake(0, self.topSpace, self.ylb_width, self.topLabelHeight);
     _bottomLabel.frame = CGRectMake(0, _topLabel.ylb_maxY + self.middleSpace, self.ylb_width, self.bottomLabelHeight);
 }
 
@@ -73,7 +73,7 @@
 }
 
 - (void)setupUpDownSubviews {
-    _topLabel.frame = CGRectMake(0, 0, self.ylb_width, self.topLabelHeight);
+    _topLabel.frame = CGRectMake(0, self.topSpace, self.ylb_width, self.topLabelHeight);
     _bottomLabel.frame = CGRectMake(0, _topLabel.ylb_maxY + self.middleSpace, self.ylb_width, self.bottomLabelHeight);
     
 }
