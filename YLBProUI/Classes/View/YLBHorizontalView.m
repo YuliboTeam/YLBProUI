@@ -44,4 +44,11 @@
 - (void)resetWidthWihSuperViewFrame:(CGRect)superViewFrame {
     self.frame = CGRectMake(self.leftSpace, 0, superViewFrame.size.width - self.leftSpace - self.rightSpace, self.customHeight);
 }
+
+- (void)resetWidthWihSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace {
+    self.leftSpace = leftSpace;
+    self.rightSpace = rightSpace;
+    self.customHeight = height;
+    self.frame = CGRectMake(leftSpace, 0, superViewFrame.size.width - leftSpace - rightSpace, height);
+}
 @end
