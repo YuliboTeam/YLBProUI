@@ -9,6 +9,7 @@
 #import "YLBLayoutLabelUpDownView.h"
 #import <YLBCommon/YLBCommon.h>
 @interface YLBLayoutLabelUpDownView ()
+@property(nonatomic, assign) CGFloat topSpace;
 @property(nonatomic, assign) CGFloat topLabelHeight;
 @property(nonatomic, assign) CGFloat middleSpace;
 @property(nonatomic, assign) CGFloat bottomLabelHeight;
@@ -24,14 +25,15 @@
 }
 */
 
-+ (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
-    YLBLayoutLabelUpDownView *upDwonView = [[YLBLayoutLabelUpDownView alloc] initWithFrame:frame topLabelHeight:topLabelHeight middleSpace:middleSpace bottomLabelHeight:bottomLabelHeight];
++ (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topSpace:(CGFloat)topSpace topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
+    YLBLayoutLabelUpDownView *upDwonView = [[YLBLayoutLabelUpDownView alloc] initWithFrame:frame topSpace:(CGFloat)topSpace topLabelHeight:topLabelHeight middleSpace:middleSpace bottomLabelHeight:bottomLabelHeight];
     return upDwonView;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
+- (instancetype)initWithFrame:(CGRect)frame topSpace:(CGFloat)topSpace topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
     self = [super initWithFrame:frame];
     if (self) {
+        self.topSpace = topSpace;
         self.topLabelHeight = topLabelHeight;
         self.middleSpace = middleSpace;
         self.bottomLabelHeight = bottomLabelHeight;
@@ -49,7 +51,8 @@
     return self;
 }
 
-- (void)resetWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
+- (void)resetWithFrame:(CGRect)frame topSpace:(CGFloat)topSpace topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
+    self.topSpace = topSpace;
     self.topLabelHeight = topLabelHeight;
     self.middleSpace = middleSpace;
     self.bottomLabelHeight = bottomLabelHeight;

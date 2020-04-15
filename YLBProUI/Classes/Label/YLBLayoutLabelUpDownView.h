@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YLBLayoutLabelUpDownView : UIView
 @property(nonatomic, strong) UILabel *topLabel;
 @property(nonatomic, strong) UILabel *bottomLabel;
-+ (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight;
-- (instancetype)initWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight;
-- (void)resetWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight;
++ (instancetype)createUpDownLabelViewWithFrame:(CGRect)frame topSpace:(CGFloat)topSpace topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight;
+- (instancetype)initWithFrame:(CGRect)frame topSpace:(CGFloat)topSpace topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight;
+- (void)resetWithFrame:(CGRect)frame topSpace:(CGFloat)topSpace topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight;
 @end
 
 NS_ASSUME_NONNULL_END
