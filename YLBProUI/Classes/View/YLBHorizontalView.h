@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
  初始化视图
  */
 - (instancetype)initWithSuperViewFrame:(CGRect)superViewFrame height:(CGFloat)height leftSpace:(CGFloat)leftSpace rightSpace:(CGFloat)rightSpace;
+/**
+ 重新设置宽度
+ */
+- (void)reFitWidth;
 @end
 
 NS_ASSUME_NONNULL_END

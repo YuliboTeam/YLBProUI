@@ -38,4 +38,8 @@
     }
     return self;
 }
+
+- (void)reFitWidth {
+    self.frame = CGRectMake(leftSpace, 0, superViewFrame.size.width - leftSpace - rightSpace, height);
+}
 @end
