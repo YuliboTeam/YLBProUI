@@ -35,12 +35,31 @@
         self.topLabelHeight = topLabelHeight;
         self.middleSpace = middleSpace;
         self.bottomLabelHeight = bottomLabelHeight;
+        [self setupUpDownLabels];
         [self setupUpDownSubviews];
     }
     return self;
 }
 
-- (void)setupUpDownSubviews {
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupUpDownLabels];
+    }
+    return self;
+}
+
+- (void)resetWithFrame:(CGRect)frame topLabelHeight:(CGFloat)topLabelHeight middleSpace:(CGFloat)middleSpace bottomLabelHeight:(CGFloat)bottomLabelHeight {
+    self.topLabelHeight = topLabelHeight;
+    self.middleSpace = middleSpace;
+    self.bottomLabelHeight = bottomLabelHeight;
+    self.frame = frame;
+    
+    _topLabel.frame = CGRectMake(0, 0, self.ylb_width, self.topLabelHeight);
+    _bottomLabel.frame = CGRectMake(0, _topLabel.ylb_maxY + self.middleSpace, self.ylb_width, self.bottomLabelHeight);
+}
+
+- (void)setupUpDownLabels {
     _topLabel = [[UILabel alloc] init];
     _topLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_topLabel];
@@ -48,12 +67,12 @@
     _bottomLabel = [[UILabel alloc] init];
     _bottomLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_bottomLabel];
-    
+}
+
+- (void)setupUpDownSubviews {
     _topLabel.frame = CGRectMake(0, 0, self.ylb_width, self.topLabelHeight);
     _bottomLabel.frame = CGRectMake(0, _topLabel.ylb_maxY + self.middleSpace, self.ylb_width, self.bottomLabelHeight);
     
 }
-
-
 
 @end
