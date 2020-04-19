@@ -72,7 +72,12 @@
     self.imageRightSpace = imageRightSpace;
     self.imageWidth = imageWidth;
     self.imageHeight = imageHeight;
-    [self setupHorizontalControlSubviews];
+    
+    _rightImageView.frame = CGRectMake(self.ylb_width - self.imageRightSpace - self.imageWidth, 0, self.imageWidth, self.imageHeight);
+    _rightImageView.ylb_centerY = self.ylb_height/2.0;
+    
+    self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.imageHeight);
+    
 }
 
 @end
