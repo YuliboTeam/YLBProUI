@@ -58,4 +58,21 @@
     [self addSubview:_rightImageView];
 }
 
+- (void)resetFrame:(CGRect)frame
+               titleLeftSpace:(CGFloat)titleLeftSpace
+                  titleHeight:(CGFloat)titleHeight
+                  middleSpace:(CGFloat)middleSpace
+              imageRightSpace:(CGFloat)imageRightSpace
+                   imageWidth:(CGFloat)imageWidth
+                  imageHeight:(CGFloat)imageHeight {
+    self.frame = frame;
+    self.titleLeftSpace = titleLeftSpace;
+    self.titleLeftSpace = titleHeight;
+    self.middleSpace = middleSpace;
+    self.imageRightSpace = imageRightSpace;
+    self.imageWidth = imageWidth;
+    self.imageHeight = imageHeight;
+    [self setupHorizontalControlSubviews];
+}
+
 @end

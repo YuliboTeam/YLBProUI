@@ -28,6 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
               imageRightSpace:(CGFloat)imageRightSpace
                    imageWidth:(CGFloat)imageWidth
                   imageHeight:(CGFloat)imageHeight;
+
+- (void)resetFrame:(CGRect)frame
+    titleLeftSpace:(CGFloat)titleLeftSpace
+       titleHeight:(CGFloat)titleHeight
+       middleSpace:(CGFloat)middleSpace
+   imageRightSpace:(CGFloat)imageRightSpace
+        imageWidth:(CGFloat)imageWidth
+       imageHeight:(CGFloat)imageHeight;
 @end
 
 NS_ASSUME_NONNULL_END
