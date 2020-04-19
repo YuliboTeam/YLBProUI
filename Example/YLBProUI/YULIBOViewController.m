@@ -7,6 +7,7 @@
 //
 
 #import "YULIBOViewController.h"
+#import "YULIBOOCShowAlertController.h"
 
 @interface YULIBOViewController ()
 @property(nonatomic, strong) NSMutableArray *dataArray;
@@ -78,10 +79,19 @@ static NSString * const kNormalCell = @"kNormalCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dict = [self.dataArray objectAtIndex:indexPath.row];
+    if (indexPath.row == 2) {
+        NSString *string = NSStringFromClass([YULIBOShowAlertController class]);
+        UIViewController *vc = [[NSClassFromString(string) alloc] init];
+        vc.title = dict[@"name"];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
     
     UIViewController *vc = [[NSClassFromString(dict[@"vc"]) alloc] init];
     vc.title = dict[@"name"];
     [self.navigationController pushViewController:vc animated:YES];
+
+
 }
 
 @end

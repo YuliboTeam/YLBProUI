@@ -14,6 +14,7 @@
 #import "YLBBaseButton.h"
 #import "YLBImageButton.h"
 #import "YLBLabelImageButton.h"
+#import "YLBHorizontalControl.h"
 #import "YLBLayoutLabelUpDownView.h"
 #import "YLBHorizontalView.h"
 #import "YLBProUI.h"

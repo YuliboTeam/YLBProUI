@@ -18,11 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    YLBLayoutLabelUpDownView *labelView = [YLBLayoutLabelUpDownView createUpDownLabelViewWithFrame:CGRectMake(0, 0, self.view.ylb_width, 50) topSpace:0 topLabelHeight:25 middleSpace:0 bottomLabelHeight:25];
+    YLBLayoutLabelUpDownView *labelView = [YLBLayoutLabelUpDownView createUpDownLabelViewWithFrame:CGRectMake(0, 0, self.view.ylb_width/2.0, 50) topSpace:0 topLabelHeight:25 middleSpace:0 bottomLabelHeight:25];
     [labelView ylb_becomeCenterInSuperView:self.view];
     labelView.topLabel.text = @"I'm topLabel";
     labelView.bottomLabel.text = @"I'm bottomLabel";
     [self.view addSubview:labelView];
+    
+    labelView.backgroundColor = UIColor.whiteColor;
+    [UIView ylb_addCustomShadowToViewWithOriginalView:labelView cornerRadius:10 shadowColor:UIColor.lightGrayColor shadowOffset:CGSizeMake(0, 4) shadowOpacity:0.5];
 }
 
 /*
