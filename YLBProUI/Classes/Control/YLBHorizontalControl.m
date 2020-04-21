@@ -55,6 +55,7 @@
     _rightImageView.ylb_centerY = self.ylb_height/2.0;
     
     self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.imageHeight);
+    self.ylbTitleLabel.ylb_centerY = self.ylb_height/2.0;
     
 }
 
@@ -85,6 +86,7 @@
     _rightImageView.ylb_centerY = self.ylb_height/2.0;
     
     self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.imageHeight);
+    self.ylbTitleLabel.ylb_centerY = self.ylb_height/2.0;
     
 }
 
