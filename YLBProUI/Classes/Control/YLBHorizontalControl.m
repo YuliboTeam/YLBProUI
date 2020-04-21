@@ -40,6 +40,14 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupHorizontalControlSubviews];
+    }
+    return self;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
