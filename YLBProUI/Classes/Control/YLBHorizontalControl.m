@@ -11,6 +11,7 @@
 
 @interface YLBHorizontalControl ()
 @property(nonatomic, assign) CGFloat titleLeftSpace;
+@property(nonatomic, assign) CGFloat titleHeight;
 @property(nonatomic, assign) CGFloat imageEdgeInsets;
 @property(nonatomic, assign) CGFloat middleSpace;
 @property(nonatomic, assign) CGFloat imageRightSpace;
@@ -54,7 +55,7 @@
     _rightImageView.frame = CGRectMake(self.ylb_width - self.imageRightSpace - self.imageWidth, 0, self.imageWidth, self.imageHeight);
     _rightImageView.ylb_centerY = self.ylb_height/2.0;
     
-    self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.imageHeight);
+    self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.titleHeight);
     self.ylbTitleLabel.ylb_centerY = self.ylb_height/2.0;
     
 }
@@ -76,7 +77,7 @@
                   imageHeight:(CGFloat)imageHeight {
     self.frame = frame;
     self.titleLeftSpace = titleLeftSpace;
-    self.titleLeftSpace = titleHeight;
+    self.titleHeight = titleHeight;
     self.middleSpace = middleSpace;
     self.imageRightSpace = imageRightSpace;
     self.imageWidth = imageWidth;
@@ -85,7 +86,7 @@
     _rightImageView.frame = CGRectMake(self.ylb_width - self.imageRightSpace - self.imageWidth, 0, self.imageWidth, self.imageHeight);
     _rightImageView.ylb_centerY = self.ylb_height/2.0;
     
-    self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.imageHeight);
+    self.ylbTitleLabel.frame = CGRectMake(self.titleLeftSpace, 0, self.ylb_width - self.titleLeftSpace - self.imageRightSpace - self.imageWidth - self.middleSpace, self.titleHeight);
     self.ylbTitleLabel.ylb_centerY = self.ylb_height/2.0;
     
 }
