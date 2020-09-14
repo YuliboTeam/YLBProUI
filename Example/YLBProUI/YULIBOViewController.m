@@ -57,6 +57,10 @@ static NSString * const kNormalCell = @"kNormalCell";
                 @"name":@"View布局",
                 @"vc":@"YULIBOShowLayoutController"
             },
+            @{
+                @"name":@"选取照片",
+                @"vc":@"YULIBOPhotoController"
+            },
         ] mutableCopy];
     }
     return _dataArray;

@@ -1,11 +1,17 @@
 PODS:
+  - TZImagePickerController (3.4.1)
   - YLBCommon (1.0.0)
   - YLBProUI (0.1.0):
     - YLBCommon
 
 DEPENDENCIES:
+  - TZImagePickerController
   - YLBCommon (from `https://github.com/ProBobo/YLBCommon.git`)
   - YLBProUI (from `../`)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - TZImagePickerController
 
 EXTERNAL SOURCES:
   YLBCommon:
@@ -19,9 +25,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ProBobo/YLBCommon.git
 
 SPEC CHECKSUMS:
+  TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
   YLBCommon: 1da4ba715aa64444554959517eb041f3d5c5cb80
   YLBProUI: f1c059b8d3151e8a6a5bdf0fba329d2e3e5bb020
 
-PODFILE CHECKSUM: 0049a682bbe7dd503f5dd6501f4281750d28bc52
+PODFILE CHECKSUM: cebc8d3acda890e95103ae73118c9e571f887da7
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

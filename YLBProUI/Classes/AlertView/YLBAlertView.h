@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, YLBAlertViewAlignment) {
  显示弹框
  */
 - (void)showView:(UIView *)view alignment:(YLBAlertViewAlignment)alignment;
+- (void)showView:(UIView *)view alignment:(YLBAlertViewAlignment)alignment atIndex:(NSInteger)index;
 /**
  移除弹框
  */

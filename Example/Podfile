@@ -8,6 +8,9 @@ target 'YLBProUI_Example' do
   pod 'YLBCommon', :git =>'https://github.com/ProBobo/YLBCommon.git'
   # UI库
   pod 'YLBProUI', :path => '../'
+  
+  #相册
+  pod 'TZImagePickerController'
 
   target 'YLBProUI_Tests' do
     inherit! :search_paths

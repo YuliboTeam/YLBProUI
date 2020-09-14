@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		BE23BC9F24E542020040C70F /* YULIBOPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE23BC9E24E542020040C70F /* YULIBOPhotoController.m */; };
 		BE4FB0CE2445659800EEF072 /* YULIBOShowAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0CD2445659800EEF072 /* YULIBOShowAlertController.swift */; };
 		BE4FB0D4244566EE00EEF072 /* YULIBOOCShowAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0D3244566EE00EEF072 /* YULIBOOCShowAlertController.m */; };
 		BE4FB0D82445690F00EEF072 /* YULIBOShowLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FB0D72445690F00EEF072 /* YULIBOShowLabelController.m */; };
@@ -68,6 +69,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99DA35C53AD1FC3DB4C86400 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AF10A7E22152A5487377DA2E /* Pods_YLBProUI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLBProUI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE23BC9D24E542020040C70F /* YULIBOPhotoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YULIBOPhotoController.h; sourceTree = "<group>"; };
+		BE23BC9E24E542020040C70F /* YULIBOPhotoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YULIBOPhotoController.m; sourceTree = "<group>"; };
 		BE4FB0CC2445659800EEF072 /* YLBProUI_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YLBProUI_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		BE4FB0CD2445659800EEF072 /* YULIBOShowAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YULIBOShowAlertController.swift; sourceTree = "<group>"; };
 		BE4FB0D2244566EE00EEF072 /* YULIBOOCShowAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YULIBOOCShowAlertController.h; sourceTree = "<group>"; };
@@ -209,9 +212,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BE23BC9C24E541E60040C70F /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				BE23BC9D24E542020040C70F /* YULIBOPhotoController.h */,
+				BE23BC9E24E542020040C70F /* YULIBOPhotoController.m */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		BE4FB0CA2445654F00EEF072 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE23BC9C24E541E60040C70F /* Photo */,
 				BE4FB0EE244613A800EEF072 /* View */,
 				BE4FB0D5244568A200EEF072 /* Label */,
 				BE4FB0CB2445654F00EEF072 /* Alert */,
@@ -300,6 +313,7 @@
 				ORGANIZATIONNAME = "余礼钵";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
+						DevelopmentTeam = M6Z7C5C7K3;
 						LastSwiftMigration = 1130;
 					};
 					6003F5AD195388D20070C39A = {
@@ -401,11 +415,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YLBProUI_Example/Pods-YLBProUI_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/YLBCommon/YLBCommon.framework",
 				"${BUILT_PRODUCTS_DIR}/YLBProUI/YLBProUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLBCommon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLBProUI.framework",
 			);
@@ -425,6 +441,7 @@
 				BE4FB0F1244613E000EEF072 /* YULIBOShowLayoutController.m in Sources */,
 				BE4FB0D82445690F00EEF072 /* YULIBOShowLabelController.m in Sources */,
 				BE4FB0D4244566EE00EEF072 /* YULIBOOCShowAlertController.m in Sources */,
+				BE23BC9F24E542020040C70F /* YULIBOPhotoController.m in Sources */,
 				6003F5A7195388D20070C39A /* YULIBOViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BE4FB0CE2445659800EEF072 /* YULIBOShowAlertController.swift in Sources */,
@@ -559,6 +576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M6Z7C5C7K3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YLBProUI/YLBProUI-Prefix.pch";
 				INFOPLIST_FILE = "YLBProUI/YLBProUI-Info.plist";
@@ -580,6 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = M6Z7C5C7K3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YLBProUI/YLBProUI-Prefix.pch";
 				INFOPLIST_FILE = "YLBProUI/YLBProUI-Info.plist";

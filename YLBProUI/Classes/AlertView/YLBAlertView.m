@@ -82,6 +82,23 @@
         [UIApplication.sharedApplication.delegate.window addSubview:self];
     }
 }
+
+- (void)showView:(UIView *)view alignment:(YLBAlertViewAlignment)alignment atIndex:(NSInteger)index {
+    if (!_isAddContentView) {
+        _isAddContentView = YES;
+        _contentView = view;
+        if (_contentView) {
+            if (alignment == YLBAlertViewAlignmentCenter) {
+                _contentView.center = CGPointMake(self.ylb_width/2.0, self.ylb_height/2.0);
+            }
+            _contentView.userInteractionEnabled = YES;
+            [self addSubview:_contentView];
+        }
+        
+        [UIApplication.sharedApplication.delegate.window insertSubview:self atIndex:index];
+    }
+}
+
 #pragma mark - 移除弹框
 - (void)hideView {
     [_contentView removeFromSuperview];
