@@ -17,6 +17,7 @@
 #import "YLBHorizontalControl.h"
 #import "YLBLayoutLabelUpDownView.h"
 #import "YLBHorizontalView.h"
+#import "YLBNavigationBarView.h"
 #import "YLBProUI.h"
 
 FOUNDATION_EXPORT double YLBProUIVersionNumber;
